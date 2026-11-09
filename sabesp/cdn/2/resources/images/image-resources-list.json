@@ -1,0 +1,41 @@
+{
+  "1753818760510": {
+    "originalName": "logo_effico.png",
+    "fileName": "1753818760510.png",
+    "size": 9045,
+    "url": "${appResourceUrl}/images/widget_7/1753818760510.png",
+    "created": 1753818760510,
+    "resourcesPrefix": "images/widget_7",
+    "referredIds": [],
+    "originId": "1753818760510",
+    "fileFormat": "image/png",
+    "originalWidth": 1080,
+    "originalHeight": 288
+  },
+  "1780404568964": {
+    "originalName": "Effico Saneamento (verde espinafre).png.png",
+    "fileName": "1780404568964.png",
+    "size": 44812,
+    "url": "${appResourceUrl}/images/widget_7/1780404568964.png",
+    "created": 1780404568964,
+    "resourcesPrefix": "images/widget_7",
+    "referredIds": [],
+    "originId": "1780404568964",
+    "fileFormat": "image/png",
+    "originalWidth": 3091,
+    "originalHeight": 800
+  },
+  "1790162090635": {
+    "originalName": "Captura de tela 2026-09-23 081429.png",
+    "fileName": "1790162090635.png",
+    "size": 230766,
+    "url": "${appResourceUrl}/images/widget_7/1790162090635.png",
+    "created": 1790162090635,
+    "resourcesPrefix": "images/widget_7",
+    "referredIds": [],
+    "originId": "1790162090635",
+    "fileFormat": "image/png",
+    "originalWidth": 808,
+    "originalHeight": 267
+  }
+}

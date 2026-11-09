@@ -1,0 +1,21 @@
+{
+  "name": "previsto-realizado-pc403",
+  "label": "Previsto x Realizado PC 403",
+  "type": "widget",
+  "version": "1.21.0",
+  "exbVersion": "1.21.0",
+  "author": "Effico Saneamento",
+  "description": "Painel Previsto × Realizado da modelagem PC 403: a mesma página do dashboard gerencial (Monitor-Documentos-SABESP), lida de uma tabela privada do ArcGIS Online com o login do usuário.",
+  "copyright": "",
+  "license": "http://www.apache.org/licenses/LICENSE-2.0",
+  "properties": {
+    "hasSettingPage": false
+  },
+  "translatedLocales": [
+    "en"
+  ],
+  "defaultSize": {
+    "width": 1200,
+    "height": 800
+  }
+}

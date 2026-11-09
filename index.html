@@ -1,0 +1,49 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex, nofollow">
+<title>EWA 360 · PC 403</title>
+<style>
+  :root { --verde:#687b58; --azul:#1f3b4d; --palido:#f4f7f2; --linha:#d7e1d4; --texto:#31434b; --mudo:#60727a; }
+  * { box-sizing:border-box; }
+  body { margin:0; min-height:100vh; display:flex; flex-direction:column; background:var(--palido); color:var(--texto); font-family:"Segoe UI",Arial,sans-serif; }
+  header { background:var(--azul); color:#fff; border-bottom:4px solid var(--verde); padding:20px 24px; }
+  header h1 { margin:0; font-size:24px; }
+  header p { margin:4px 0 0; opacity:.8; font-size:14px; }
+  main { flex:1; width:100%; max-width:880px; margin:0 auto; padding:28px 16px; display:grid; gap:16px; grid-template-columns:repeat(auto-fit,minmax(260px,1fr)); align-content:start; }
+  a.card { display:block; text-decoration:none; color:inherit; background:#fff; border:1px solid var(--linha); border-radius:8px; overflow:hidden; transition:box-shadow .15s, transform .15s; }
+  a.card:hover, a.card:focus-visible { box-shadow:0 8px 24px rgba(31,59,77,.15); transform:translateY(-2px); outline:none; }
+  a.card .h { background:var(--verde); color:#fff; padding:10px 14px; font-weight:700; font-size:13px; letter-spacing:.04em; text-transform:uppercase; }
+  a.card .b { padding:14px; font-size:14px; line-height:1.5; }
+  a.card .b strong { color:var(--azul); font-size:17px; display:block; margin-bottom:4px; }
+  .nota { grid-column:1/-1; font-size:13px; color:var(--mudo); background:#fff; border:1px solid var(--linha); border-left:4px solid var(--verde); border-radius:8px; padding:10px 14px; }
+  footer { text-align:center; font-size:12px; color:var(--mudo); padding:14px; }
+</style>
+</head>
+<body>
+<header>
+  <h1>EWA 360 · Efficient Water Intelligence</h1>
+  <p>PC 403 · Modelagem SABESP · Consórcio Effico e HWater</p>
+</header>
+<main>
+  <a class="card" href="sabesp/">
+    <div class="h">Acompanhamento</div>
+    <div class="b"><strong>EWA 360</strong>Visão geral, Database, Concepções e Previsto × Realizado.</div>
+  </a>
+  <a class="card" href="interno/" id="cartao-interno">
+    <div class="h">Equipe Effico</div>
+    <div class="b"><strong>EWA 360 · interno</strong>Tudo do acompanhamento, mais Timesheet, Produtividade e edição.</div>
+  </a>
+  <div class="nota">🔒 O acesso aos dados exige login na conta ArcGIS da organização. Sem login, as páginas abrem vazias.</div>
+</main>
+<footer>Effico Saneamento</footer>
+<script>
+  // esconde o cartão de um app que ainda não foi publicado no site
+  fetch('interno/index.html', { method: 'HEAD', cache: 'no-store' })
+    .then(function (r) { if (!r.ok) document.getElementById('cartao-interno').style.display = 'none' })
+    .catch(function () { document.getElementById('cartao-interno').style.display = 'none' })
+</script>
+</body>
+</html>

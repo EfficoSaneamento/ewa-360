@@ -1,0 +1,8 @@
+﻿# nunca versionar dados, exportações ou credencial
+*.zip
+*.xlsx
+*.csv
+*.cred
+token*.json
+Thumbs.db
+desktop.ini
