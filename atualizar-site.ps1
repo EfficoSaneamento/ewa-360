@@ -9,11 +9,14 @@ if (Test-Path $tmp) { Remove-Item $tmp -Recurse -Force }
 New-Item -ItemType Directory $tmp | Out-Null
 
 Push-Location C:\exb\server
+# production: widgets e shared-code saem do build de produção (client\dist-download), não do "npm start" (client\dist)
+$envAnterior = $env:NODE_ENV
+$env:NODE_ENV = 'production'
 try {
   $js = "const d=require('./src/middlewares/dev/apps/app-download');(async()=>{for(const [id,n] of [['1','sabesp'],['0','interno']]){await d.zipApp(id,process.argv[1]+'/'+n+'.zip','$clientId');console.log('pacote',n,'ok')}})().catch(e=>{console.error(e.message);process.exit(1)})"
   node -e $js $tmp
   if ($LASTEXITCODE -ne 0) { throw 'Falha ao gerar os pacotes (os apps estão publicados no builder?)' }
-} finally { Pop-Location }
+} finally { $env:NODE_ENV = $envAnterior; Pop-Location }
 
 foreach ($n in 'sabesp', 'interno') {
   $dest = Join-Path $site $n
@@ -27,6 +30,10 @@ foreach ($n in 'sabesp', 'interno') {
   }
   # arquivos do servidor IIS e service worker não servem no GitHub Pages
   Remove-Item (Join-Path $dest 'web.config') -ErrorAction SilentlyContinue
+  # sem o código compartilhado os widgets da Effico não carregam
+  if (-not (Get-ChildItem (Join-Path $dest 'cdn') -Recurse -Filter pc403.js | Where-Object { $_.FullName -match 'shared-code' })) {
+    throw "$n sem widgets/shared-code/pc403.js: rode 'npm run build:for-download' em C:\exb\client e tente de novo"
+  }
   Write-Host "$n atualizado: $((Get-ChildItem $dest -Recurse -File).Count) arquivos"
 }
 Remove-Item $tmp -Recurse -Force
