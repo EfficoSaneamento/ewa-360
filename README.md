@@ -5,7 +5,7 @@ https://efficosaneamento.github.io/ewa-360/
 
 | Pasta | App | Páginas |
 |---|---|---|
-| `sabesp/` | PC 403 - MODELAGEM SABESP 1 (app 1) | Visão geral · Database · Concepções · Indicadores |
+| `sabesp/` | PC 403 - MODELAGEM SABESP 1 (app 1) · **em standby desde 12/11/2026** (não é regerado) | Visão geral · Database · Concepções · Indicadores |
 | `interno/` | PC 403 - MODELAGEM SABESP (app 0) | as anteriores + Produtividade · Timesheet · Editar |
 
 ## Segurança
@@ -19,7 +19,7 @@ https://efficosaneamento.github.io/ewa-360/
 ## Como atualizar
 1. No Experience Builder local (`C:\exb`), ajuste o app e clique em **Publicar**.
 2. Gere o build de produção: `npm run build:for-download` em `C:\exb\client`.
-3. Gere os pacotes e substitua as pastas `sabesp/` e `interno/` (script `atualizar-site.ps1`).
+3. Gere o pacote e substitua a pasta `interno/` (script `atualizar-site.ps1`; `-ComSabesp` regera também `sabesp/`).
 4. `git add -A && git commit -m "Atualização" && git push`.
 
 Código-fonte dos widgets: `C:\exb\client\your-extensions\widgets` (effico-executive, timesheet-pc403,

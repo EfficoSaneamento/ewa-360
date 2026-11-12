@@ -1,9 +1,14 @@
-# Gera os pacotes dos apps (Experience Builder local) e atualiza as pastas sabesp/ e interno/ deste site.
+# Gera os pacotes dos apps (Experience Builder local) e atualiza as pastas do site.
 # Pré-requisitos: apps publicados no builder local e "npm run build:for-download" rodado em C:\exb\client.
-# Uso: powershell -ExecutionPolicy Bypass -File .\atualizar-site.ps1
+# Uso: powershell -ExecutionPolicy Bypass -File .\atualizar-site.ps1            (só interno/)
+#      powershell -ExecutionPolicy Bypass -File .\atualizar-site.ps1 -ComSabesp (interno/ e sabesp/)
+# App da Sabesp (sabesp/) em STANDBY desde 12/11/2026: a pasta fica como está e só é regerada com -ComSabesp.
+param([switch]$ComSabesp)
 $ErrorActionPreference = 'Stop'
 $site = $PSScriptRoot
 $clientId = 'lNYt5AOFsvNkreve'   # aplicativo OAuth "EWA 360 (GitHub Pages)"
+$apps = @(@('0', 'interno'))
+if ($ComSabesp) { $apps += , @('1', 'sabesp') } else { Write-Host 'sabesp/ em standby: mantida como está (use -ComSabesp para regerar).' }
 $tmp = Join-Path $env:TEMP "ewa360-pacotes"
 if (Test-Path $tmp) { Remove-Item $tmp -Recurse -Force }
 New-Item -ItemType Directory $tmp | Out-Null
@@ -13,12 +18,13 @@ Push-Location C:\exb\server
 $envAnterior = $env:NODE_ENV
 $env:NODE_ENV = 'production'
 try {
-  $js = "const d=require('./src/middlewares/dev/apps/app-download');(async()=>{for(const [id,n] of [['1','sabesp'],['0','interno']]){await d.zipApp(id,process.argv[1]+'/'+n+'.zip','$clientId');console.log('pacote',n,'ok')}})().catch(e=>{console.error(e.message);process.exit(1)})"
+  $lista = ($apps | ForEach-Object { "['$($_[0])','$($_[1])']" }) -join ','
+  $js = "const d=require('./src/middlewares/dev/apps/app-download');(async()=>{for(const [id,n] of [$lista]){await d.zipApp(id,process.argv[1]+'/'+n+'.zip','$clientId');console.log('pacote',n,'ok')}})().catch(e=>{console.error(e.message);process.exit(1)})"
   node -e $js $tmp
   if ($LASTEXITCODE -ne 0) { throw 'Falha ao gerar os pacotes (os apps estão publicados no builder?)' }
 } finally { $env:NODE_ENV = $envAnterior; Pop-Location }
 
-foreach ($n in 'sabesp', 'interno') {
+foreach ($n in ($apps | ForEach-Object { $_[1] })) {
   $dest = Join-Path $site $n
   if (Test-Path $dest) { Remove-Item $dest -Recurse -Force }
   Expand-Archive -LiteralPath (Join-Path $tmp "$n.zip") -DestinationPath $dest
