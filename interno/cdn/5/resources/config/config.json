@@ -9,7 +9,7 @@
       },
       "isDefault": false,
       "isVisible": true,
-      "label": "Previsto × Realizado",
+      "label": "Indicadores",
       "header": true,
       "bodyBackgroundColor": "var(--primary-900)",
       "footer": false,
@@ -2215,6 +2215,7 @@
       "label": "Nome do Projeto",
       "config": {
         "text": "<p style=\"text-align: center;\">MODELAGEM SABESP</p><p style=\"text-align: center;\">CONSÓRCIO EFFICO E HWATER</p>",
+        "placeholder": "<p><span style=\"font-size: 24px;\">Título</span></p>",
         "style": {
           "verticalAlign": "center",
           "wrap": true,
@@ -2937,7 +2938,7 @@
     "widget_329": {
       "uri": "widgets/previsto-realizado-pc403/",
       "version": "1.21.0",
-      "label": "Previsto x Realizado PC 403",
+      "label": "Indicadores PC 403",
       "config": {
         "dadosUrl": "https://services6.arcgis.com/QJAp6nG4ishOkuMg/arcgis/rest/services/pc403_previsto_realizado_painel/FeatureServer/0"
       },
@@ -3399,14 +3400,7 @@
     }
   },
   "attributes": {
-    "portalUrl": "https://efficoutilities.maps.arcgis.com",
-    "isWebTier": false,
-    "clientId": "lNYt5AOFsvNkreve",
-    "express": false,
-    "title": "PC 403 - MODELAGEM SABESP_Template 1",
-    "description": "",
-    "type": "Web Experience",
-    "thumbnail": null
+    "portalUrl": "https://efficoutilities.maps.arcgis.com"
   },
   "timestamp": "1793878779403",
   "sharedThemeVariables": {
@@ -3908,6 +3902,5 @@
         }
       }
     }
-  },
-  "publishTimestamp": 1794250187054
+  }
 }

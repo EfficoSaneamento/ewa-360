@@ -9,7 +9,7 @@
       },
       "isDefault": false,
       "isVisible": true,
-      "label": "Previsto × Realizado",
+      "label": "Indicadores",
       "header": true,
       "bodyBackgroundColor": "var(--primary-900)",
       "footer": false,
@@ -1515,7 +1515,7 @@
     "widget_329": {
       "uri": "widgets/previsto-realizado-pc403/",
       "version": "1.21.0",
-      "label": "Previsto x Realizado PC 403",
+      "label": "Indicadores PC 403",
       "config": {
         "dadosUrl": "https://services6.arcgis.com/QJAp6nG4ishOkuMg/arcgis/rest/services/pc403_previsto_realizado_painel/FeatureServer/0"
       },

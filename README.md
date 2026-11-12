@@ -5,7 +5,7 @@ https://efficosaneamento.github.io/ewa-360/
 
 | Pasta | App | Páginas |
 |---|---|---|
-| `sabesp/` | PC 403 - MODELAGEM SABESP 1 (app 1) | Visão geral · Database · Concepções · Previsto × Realizado |
+| `sabesp/` | PC 403 - MODELAGEM SABESP 1 (app 1) | Visão geral · Database · Concepções · Indicadores |
 | `interno/` | PC 403 - MODELAGEM SABESP (app 0) | as anteriores + Produtividade · Timesheet · Editar |
 
 ## Segurança
