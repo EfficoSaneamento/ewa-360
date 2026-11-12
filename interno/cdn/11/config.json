@@ -210,7 +210,7 @@
         "LARGE": "layout_206"
       },
       "isDefault": false,
-      "isVisible": true,
+      "isVisible": false,
       "label": "Produtividade",
       "header": true,
       "footer": false,
