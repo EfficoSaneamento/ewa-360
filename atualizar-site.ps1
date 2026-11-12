@@ -7,7 +7,7 @@ param([switch]$ComSabesp)
 $ErrorActionPreference = 'Stop'
 $site = $PSScriptRoot
 $clientId = 'lNYt5AOFsvNkreve'   # aplicativo OAuth "EWA 360 (GitHub Pages)"
-$apps = @(@('0', 'interno'))
+$apps = @(, @('0', 'interno'))   # a vírgula mantém a lista de pares mesmo com um só app
 if ($ComSabesp) { $apps += , @('1', 'sabesp') } else { Write-Host 'sabesp/ em standby: mantida como está (use -ComSabesp para regerar).' }
 $tmp = Join-Path $env:TEMP "ewa360-pacotes"
 if (Test-Path $tmp) { Remove-Item $tmp -Recurse -Force }
