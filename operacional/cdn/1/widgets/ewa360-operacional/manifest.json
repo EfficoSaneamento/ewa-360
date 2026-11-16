@@ -1,0 +1,19 @@
+{
+  "name": "ewa360-operacional",
+  "label": "EWA 360 | Gestão operacional",
+  "type": "widget",
+  "version": "0.1.0",
+  "exbVersion": "1.21.0",
+  "author": "EFFICO",
+  "description": "Consulta operacional de setores com filtros territoriais e indicadores rastreáveis.",
+  "defaultSize": {
+    "width": 960,
+    "height": 580
+  },
+  "translatedLocales": [
+    "en"
+  ],
+  "properties": {
+    "hasSettingPage": false
+  }
+}
