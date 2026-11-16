@@ -6,13 +6,7 @@ https://efficosaneamento.github.io/ewa-360/
 | Pasta | App | Páginas |
 |---|---|---|
 | `sabesp/` | PC 403 - MODELAGEM SABESP 1 (app 1) · **em standby desde 12/11/2026** (não é regerado) | Visão geral · Database · Concepções · Indicadores |
-| `interno/` | PC 403 - MODELAGEM SABESP (app 0) | as anteriores + Produtividade (só gestores) · Timesheet · Editar |
-| `operacional/` | EWA 360 \| Operacional (download do Builder, sem código-fonte aqui) | Home · Editar · Indicadores · Timesheet · Diretoria (`?page=page_10&dir=oo`) |
-
-A entrada do EWA 360 é o **Hub** (https://efficoutilities.hub.arcgis.com/pages/pc-403-modelagem-sabesp~0c5b6186c24c44ea9ca0a1dea1b79f4b);
-o `index.html` da raiz só redireciona para lá. Os botões das diretorias do Hub abrem `operacional/`.
-`operacional/` foi gerado do zip "EWA 360 _ Operacional" com dois ajustes para o GitHub Pages: navegação por `?page=`
-no widget ewa360-operacional e clientId do app OAuth "EWA 360 (GitHub Pages)".
+| `interno/` | PC 403 - MODELAGEM SABESP (app 0) | as anteriores + Produtividade · Timesheet · Editar |
 
 ## Segurança
 - **Este repositório não contém dados.** Tem só o código do site (HTML/JS gerados pelo Experience Builder).
