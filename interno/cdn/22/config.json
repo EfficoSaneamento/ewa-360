@@ -228,6 +228,28 @@
           "color": "var(--ref-palette-neutral-1100)"
         }
       }
+    },
+    "page_32": {
+      "id": "page_32",
+      "mode": "FIT_WINDOW",
+      "type": "NORMAL",
+      "layout": {
+        "LARGE": "layout_demandas_large"
+      },
+      "isDefault": false,
+      "isVisible": true,
+      "label": "Demandas",
+      "header": true,
+      "footer": false,
+      "icon": {
+        "svg": "<svg xmlns=\"http://www.w3.org/2000/svg\" fill=\"none\" viewBox=\"0 0 16 16\"><path fill=\"#000\" d=\"M1 2h4v12H1zm1 1v10h2V3zm4-1h4v8H6zm1 1v6h2V3zm4-1h4v5h-4zm1 1v3h2V3z\"/></svg>",
+        "properties": {
+          "filename": "Kanban",
+          "inlineSvg": true,
+          "isUploaded": false,
+          "color": "var(--ref-palette-neutral-1100)"
+        }
+      }
     }
   },
   "layouts": {
@@ -2103,6 +2125,38 @@
       "order": [
         "0"
       ]
+    },
+    "layout_demandas_large": {
+      "type": "FIXED",
+      "content": {
+        "0": {
+          "type": "WIDGET",
+          "widgetId": "widget_400",
+          "bbox": {
+            "left": "0%",
+            "right": "0%",
+            "top": "0%",
+            "bottom": "0%",
+            "width": "100%",
+            "height": "100%"
+          },
+          "setting": {
+            "autoProps": {
+              "left": false,
+              "right": false,
+              "top": false,
+              "bottom": false,
+              "width": "STRETCH",
+              "height": "STRETCH"
+            },
+            "vCenter": false,
+            "hCenter": false
+          }
+        }
+      },
+      "order": [
+        "0"
+      ]
     }
   },
   "exbVersion": "1.21.0",
@@ -3299,6 +3353,18 @@
         "metaHorasDia": 8
       },
       "id": "widget_331"
+    },
+    "widget_400": {
+      "uri": "widgets/demandas-pc403/",
+      "version": "1.21.0",
+      "label": "Demandas PC 403",
+      "config": {
+        "serviceUrl": "https://services6.arcgis.com/QJAp6nG4ishOkuMg/arcgis/rest/services/service_ade14533db8d4d12a586ee30e94a0dc8/FeatureServer",
+        "setoresLayerId": 0,
+        "apontamentosLayerId": 1,
+        "demandasUrl": "https://services6.arcgis.com/QJAp6nG4ishOkuMg/arcgis/rest/services/pc403_demandas/FeatureServer/0"
+      },
+      "id": "widget_400"
     }
   },
   "widgetsManifest": {},
@@ -3819,6 +3885,9 @@
     },
     {
       "page_27": []
+    },
+    {
+      "page_32": []
     },
     {
       "page_25": []

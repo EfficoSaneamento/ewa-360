@@ -1,0 +1,21 @@
+{
+  "name": "demandas-pc403",
+  "label": "Demandas PC 403",
+  "type": "widget",
+  "version": "1.21.0",
+  "exbVersion": "1.21.0",
+  "author": "Effico Saneamento",
+  "description": "Quadro de demandas da equipe de modelagem PC 403: modelos de etapas por produto, status (inclui Aguardando dados), responsável e prazo, com os mesmos códigos de setor e etapa do Timesheet. Tabela pc403_demandas (sem Delete).",
+  "copyright": "",
+  "license": "http://www.apache.org/licenses/LICENSE-2.0",
+  "properties": {
+    "hasSettingPage": false
+  },
+  "translatedLocales": [
+    "en"
+  ],
+  "defaultSize": {
+    "width": 1200,
+    "height": 800
+  }
+}
