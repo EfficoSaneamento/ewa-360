@@ -188,20 +188,17 @@
           "widgetId": "widget_6",
           "bbox": {
             "left": "14px",
-            "right": "1057px",
-            "top": "0.0%",
-            "bottom": "0.0%",
-            "width": "17.1%",
-            "height": "100.0%"
+            "top": "0%",
+            "bottom": "0%",
+            "width": "176px",
+            "height": "100%"
           },
           "setting": {
             "autoProps": {
               "left": false,
-              "right": false,
+              "right": true,
               "top": false,
-              "bottom": false,
-              "width": "STRETCH",
-              "height": "STRETCH"
+              "bottom": false
             },
             "vCenter": false,
             "hCenter": false
@@ -235,11 +232,10 @@
           "type": "WIDGET",
           "widgetId": "widget_8",
           "bbox": {
-            "left": "18.0%",
-            "right": "64.4%",
+            "left": "200px",
             "top": "7.9%",
             "bottom": "7.9%",
-            "width": "17.6%",
+            "width": "176px",
             "height": "84.2%"
           },
           "setting": {
@@ -261,8 +257,8 @@
           "type": "WIDGET",
           "widgetId": "widget_7",
           "bbox": {
-            "width": "221px",
-            "height": 63
+            "width": "172px",
+            "height": 58
           },
           "setting": {
             "autoProps": {
@@ -1358,20 +1354,20 @@
       "label": "Logo",
       "config": {
         "functionConfig": {
-          "altText": "",
-          "toolTip": "",
+          "altText": "EWA 360 · Efficient Water Intelligence",
+          "toolTip": "EWA 360",
           "linkParam": {},
           "scale": "Fit",
           "imageParam": {
-            "url": "${appResourceUrl}/images/widget_7/1790162090635.png",
-            "originalUrl": "${appResourceUrl}/images/widget_7/1790162090635.png",
-            "fileName": "1790162090635.png",
-            "originalName": "Captura de tela 2026-09-23 081429.png",
+            "url": "${appResourceUrl}/images/widget_7/ewa360-logo.png",
+            "originalUrl": "${appResourceUrl}/images/widget_7/ewa360-logo.png",
+            "fileName": "ewa360-logo.png",
+            "originalName": "ewa360-logo.png",
             "imgSourceType": "BY_UPLOAD",
             "fileFormat": "image/png",
-            "originalId": "1790162090635",
-            "originalWidth": 808,
-            "originalHeight": 267
+            "originalId": "ewa360-logo",
+            "originalWidth": 780,
+            "originalHeight": 264
           },
           "imgSourceType": "",
           "srcExpression": null,
@@ -1386,11 +1382,11 @@
       "version": "1.21.0",
       "label": "Nome do Projeto",
       "config": {
-        "text": "<p style=\"text-align: center;\">MODELAGEM SABESP</p><p style=\"text-align: center;\">CONSÓRCIO EFFICO E HWATER</p>",
+        "text": "<p style=\"text-align: left; margin: 0;\"><span style=\"color: #ffffff; font-size: 13px; font-weight: 700; letter-spacing: 0.05em;\">MODELAGEM SABESP</span></p><p style=\"text-align: left; margin: 0;\"><span style=\"color: #a9cc8c; font-size: 10.5px; font-weight: 600;\">PC 403 · Consórcio Effico · HWater</span></p>",
         "style": {
           "verticalAlign": "center",
           "wrap": true,
-          "color": "#687b58"
+          "color": "#ffffff"
         }
       },
       "id": "widget_8"
@@ -1489,16 +1485,17 @@
         "advanced": true,
         "variant": {
           "item": {
-            "hover": {
-              "color": "#ffffff",
-              "bg": "#687b58"
-            },
             "default": {
-              "bg": "#1f3b4d",
+              "bg": "transparent",
+              "color": "rgba(255, 255, 255, 0.82)"
+            },
+            "hover": {
+              "bg": "rgba(255, 255, 255, 0.10)",
               "color": "#ffffff"
             },
             "active": {
-              "bg": "#687b58"
+              "bg": "#687b58",
+              "color": "#ffffff"
             }
           }
         }
@@ -1876,14 +1873,7 @@
   "dialogs": {},
   "messageConfigs": {},
   "attributes": {
-    "portalUrl": "https://efficoutilities.maps.arcgis.com",
-    "isWebTier": false,
-    "clientId": "lNYt5AOFsvNkreve",
-    "express": false,
-    "title": "PC 403 - MODELAGEM SABESP 1",
-    "description": "",
-    "type": "Web Experience",
-    "thumbnail": null
+    "portalUrl": "https://efficoutilities.maps.arcgis.com"
   },
   "timestamp": "1793878779403",
   "sharedThemeVariables": {
@@ -1931,7 +1921,7 @@
     "height": {
       "LARGE": 64
     },
-    "backgroundColor": "var(--secondary)"
+    "backgroundColor": "#173445"
   },
   "utilities": {
     "utility_1": {
@@ -1977,6 +1967,5 @@
     }
   },
   "controllerPanels": {},
-  "placeholderInfos": {},
-  "publishTimestamp": 1794245395726
+  "placeholderInfos": {}
 }

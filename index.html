@@ -6,39 +6,106 @@
 <meta name="robots" content="noindex, nofollow">
 <title>EWA 360 · PC 403</title>
 <style>
-  :root { --verde:#687b58; --azul:#1f3b4d; --palido:#f4f7f2; --linha:#d7e1d4; --texto:#31434b; --mudo:#60727a; }
+  :root {
+    --navy:#173445; --navy-2:#1f3b4d; --verde:#687b58; --verde-claro:#a9cc8c; --ciano:#12cdff;
+    --fundo:#f4f7f2; --linha:#d7e1d4; --texto:#31434b; --mudo:#60727a; --branco:#fff;
+  }
   * { box-sizing:border-box; }
-  body { margin:0; min-height:100vh; display:flex; flex-direction:column; background:var(--palido); color:var(--texto); font-family:"Segoe UI",Arial,sans-serif; }
-  header { background:var(--azul); color:#fff; border-bottom:4px solid var(--verde); padding:20px 24px; }
-  header h1 { margin:0; font-size:24px; }
-  header p { margin:4px 0 0; opacity:.8; font-size:14px; }
-  main { flex:1; width:100%; max-width:880px; margin:0 auto; padding:28px 16px; display:grid; gap:16px; grid-template-columns:repeat(auto-fit,minmax(260px,1fr)); align-content:start; }
-  a.card { display:block; text-decoration:none; color:inherit; background:#fff; border:1px solid var(--linha); border-radius:8px; overflow:hidden; transition:box-shadow .15s, transform .15s; }
-  a.card:hover, a.card:focus-visible { box-shadow:0 8px 24px rgba(31,59,77,.15); transform:translateY(-2px); outline:none; }
-  a.card .h { background:var(--verde); color:#fff; padding:10px 14px; font-weight:700; font-size:13px; letter-spacing:.04em; text-transform:uppercase; }
-  a.card .b { padding:14px; font-size:14px; line-height:1.5; }
-  a.card .b strong { color:var(--azul); font-size:17px; display:block; margin-bottom:4px; }
-  .nota { grid-column:1/-1; font-size:13px; color:var(--mudo); background:#fff; border:1px solid var(--linha); border-left:4px solid var(--verde); border-radius:8px; padding:10px 14px; }
-  footer { text-align:center; font-size:12px; color:var(--mudo); padding:14px; }
+  html, body { margin:0; }
+  body { min-height:100vh; display:flex; flex-direction:column; background:var(--fundo); color:var(--texto); font-family:"Segoe UI",Arial,sans-serif; }
+
+  /* faixa de abertura, no mesmo azul do cabeçalho dos apps */
+  .hero { background:radial-gradient(1200px 400px at 85% -10%, rgba(18,205,255,.18), transparent 60%), linear-gradient(160deg, var(--navy) 0%, var(--navy-2) 100%); color:var(--branco); padding:36px 16px 96px; }
+  .hero__in { max-width:1040px; margin:0 auto; }
+  .hero img { height:64px; width:auto; display:block; }
+  .hero h1 { margin:28px 0 6px; font-size:clamp(24px, 3.2vw, 34px); font-weight:700; letter-spacing:-.01em; }
+  .hero p { margin:0; font-size:15px; color:rgba(255,255,255,.78); }
+  .hero .tag { display:inline-block; margin-top:14px; padding:4px 10px; border-radius:999px; background:rgba(169,204,140,.16); color:var(--verde-claro); font-size:12px; font-weight:600; letter-spacing:.04em; }
+
+  main { flex:1; width:100%; max-width:1040px; margin:-64px auto 0; padding:0 16px 32px; }
+  .cards { display:grid; gap:20px; grid-template-columns:repeat(auto-fit, minmax(300px, 1fr)); }
+
+  a.card { position:relative; display:flex; flex-direction:column; text-decoration:none; color:inherit; background:var(--branco); border:1px solid var(--linha); border-radius:14px; overflow:hidden; box-shadow:0 10px 30px rgba(23,52,69,.10); transition:box-shadow .18s, transform .18s; }
+  a.card:hover, a.card:focus-visible { box-shadow:0 18px 40px rgba(23,52,69,.18); transform:translateY(-3px); outline:none; }
+  a.card:focus-visible { outline:3px solid var(--ciano); outline-offset:2px; }
+  .card__faixa { height:6px; background:var(--cor); }
+  .card__corpo { padding:24px 24px 20px; display:flex; flex-direction:column; gap:14px; flex:1; }
+  .card__topo { display:flex; align-items:center; gap:14px; }
+  .card__icone { flex:none; width:48px; height:48px; border-radius:12px; display:grid; place-items:center; background:var(--cor-fundo); color:var(--cor); }
+  .card__icone svg { width:26px; height:26px; stroke:currentColor; fill:none; stroke-width:1.8; stroke-linecap:round; stroke-linejoin:round; }
+  .card__rotulo { font-size:11px; font-weight:700; letter-spacing:.08em; text-transform:uppercase; color:var(--mudo); }
+  .card h2 { margin:2px 0 0; font-size:22px; color:var(--navy); }
+  .card__texto { margin:0; font-size:14px; line-height:1.55; color:var(--texto); }
+  .card ul { margin:0; padding:0; list-style:none; display:flex; flex-wrap:wrap; gap:6px; }
+  .card li { font-size:12px; font-weight:600; padding:4px 10px; border-radius:999px; background:var(--fundo); border:1px solid var(--linha); color:var(--texto); }
+  .card__acao { margin-top:auto; padding-top:6px; display:flex; align-items:center; gap:8px; font-size:14px; font-weight:700; color:var(--cor); }
+  .card__acao svg { width:18px; height:18px; stroke:currentColor; fill:none; stroke-width:2.2; transition:transform .18s; }
+  a.card:hover .card__acao svg { transform:translateX(4px); }
+
+  .sabesp { --cor:#0b6ea8; --cor-fundo:#e3f1fa; }
+  .effico { --cor:var(--verde); --cor-fundo:#edf3e7; }
+
+  .nota { margin-top:20px; display:flex; gap:10px; align-items:flex-start; font-size:13px; color:var(--mudo); background:var(--branco); border:1px solid var(--linha); border-radius:10px; padding:12px 14px; }
+  .nota svg { flex:none; width:18px; height:18px; stroke:var(--verde); fill:none; stroke-width:2; margin-top:1px; }
+  footer { text-align:center; font-size:12px; color:var(--mudo); padding:16px; border-top:1px solid var(--linha); background:var(--branco); }
+
+  @media (max-width:520px) {
+    .hero { padding:28px 16px 84px; }
+    .hero img { height:52px; }
+    .card__corpo { padding:20px 18px 18px; }
+  }
 </style>
 </head>
 <body>
-<header>
-  <h1>EWA 360 · Efficient Water Intelligence</h1>
-  <p>PC 403 · Modelagem SABESP · Consórcio Effico e HWater</p>
-</header>
+<section class="hero">
+  <div class="hero__in">
+    <img src="assets/ewa360-logo.png" alt="EWA 360 · Efficient Water Intelligence" width="189" height="64">
+    <h1>Modelagem SABESP · PC 403</h1>
+    <p>Consórcio Effico · HWater</p>
+    <span class="tag">Escolha o ambiente de acesso</span>
+  </div>
+</section>
+
 <main>
-  <a class="card" href="sabesp/">
-    <div class="h">Acompanhamento</div>
-    <div class="b"><strong>EWA 360</strong>Visão geral, Database, Concepções e Previsto × Realizado.</div>
-  </a>
-  <a class="card" href="interno/" id="cartao-interno">
-    <div class="h">Equipe Effico</div>
-    <div class="b"><strong>EWA 360 · interno</strong>Tudo do acompanhamento, mais Timesheet, Produtividade e edição.</div>
-  </a>
-  <div class="nota">🔒 O acesso aos dados exige login na conta ArcGIS da organização. Sem login, as páginas abrem vazias.</div>
+  <div class="cards">
+    <a class="card sabesp" href="sabesp/">
+      <div class="card__faixa"></div>
+      <div class="card__corpo">
+        <div class="card__topo">
+          <span class="card__icone" aria-hidden="true">
+            <svg viewBox="0 0 24 24"><path d="M12 3c-3.5 4.2-6 7.6-6 10.6A6 6 0 0 0 18 13.6C18 10.6 15.5 7.2 12 3z"/><path d="M9.5 14.5a2.6 2.6 0 0 0 2.5 2.4"/></svg>
+          </span>
+          <div><div class="card__rotulo">Acompanhamento do contrato</div><h2>Visão Sabesp</h2></div>
+        </div>
+        <p class="card__texto">Situação dos setores, cronograma e avanço das entregas do contrato.</p>
+        <ul><li>Visão geral</li><li>Database</li><li>Concepções</li><li>Indicadores</li></ul>
+        <span class="card__acao">Acessar <svg viewBox="0 0 24 24"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span>
+      </div>
+    </a>
+
+    <a class="card effico" href="interno/" id="cartao-interno">
+      <div class="card__faixa"></div>
+      <div class="card__corpo">
+        <div class="card__topo">
+          <span class="card__icone" aria-hidden="true">
+            <svg viewBox="0 0 24 24"><circle cx="9" cy="8" r="3.2"/><path d="M3.5 19a5.5 5.5 0 0 1 11 0"/><circle cx="17" cy="9" r="2.4"/><path d="M15.5 14.2A4.5 4.5 0 0 1 20.5 19"/></svg>
+          </span>
+          <div><div class="card__rotulo">Equipe interna</div><h2>Effico Saneamento</h2></div>
+        </div>
+        <p class="card__texto">Tudo da Visão Sabesp, mais as ferramentas de gestão da equipe.</p>
+        <ul><li>Timesheet</li><li>Produtividade</li><li>Medições (BM)</li><li>Edição</li></ul>
+        <span class="card__acao">Acessar <svg viewBox="0 0 24 24"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span>
+      </div>
+    </a>
+  </div>
+
+  <div class="nota">
+    <svg viewBox="0 0 24 24" aria-hidden="true"><rect x="5" y="11" width="14" height="9" rx="2"/><path d="M8 11V8a4 4 0 0 1 8 0v3"/></svg>
+    <span>O acesso aos dados exige login na conta ArcGIS da organização. Sem login, as páginas abrem vazias.</span>
+  </div>
 </main>
-<footer>Effico Saneamento</footer>
+
+<footer>Effico Saneamento · EWA 360</footer>
 <script>
   // esconde o cartão de um app que ainda não foi publicado no site
   fetch('interno/index.html', { method: 'HEAD', cache: 'no-store' })
