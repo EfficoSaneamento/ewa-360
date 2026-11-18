@@ -358,8 +358,8 @@
           "type": "WIDGET",
           "widgetId": "widget_7",
           "bbox": {
-            "width": "50.00px",
-            "height": "30px"
+            "width": "106px",
+            "height": "36px"
           },
           "setting": {
             "autoProps": {
@@ -496,8 +496,8 @@
           "type": "WIDGET",
           "widgetId": "widget_7",
           "bbox": {
-            "width": "50.00px",
-            "height": "30px"
+            "width": "136px",
+            "height": "46px"
           },
           "setting": {
             "autoProps": {
