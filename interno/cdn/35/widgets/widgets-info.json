@@ -12810,6 +12810,72 @@
     "group": 2
   },
   {
+    "name": "bonificacao-pc392",
+    "manifest": {
+      "name": "bonificacao-pc392",
+      "label": "Bonificação PC 392",
+      "type": "widget",
+      "version": "1.0.0",
+      "exbVersion": "1.21.0",
+      "author": "Effico Saneamento",
+      "description": "Painel de bonificação GE D.LEAK (PC 392), lendo a camada RELATÓRIOS direto do ArcGIS com o login do app. Substitui o site do GitHub.",
+      "copyright": "",
+      "license": "http://www.apache.org/licenses/LICENSE-2.0",
+      "dependency": [
+        "jimu-arcgis"
+      ],
+      "defaultSize": {
+        "width": 1200,
+        "height": 800
+      },
+      "translatedLocales": [
+        "en"
+      ],
+      "properties": {
+        "hasSettingPage": false
+      }
+    },
+    "i18nLabel": {},
+    "i18nDescription": {},
+    "uri": "widgets/bonificacao-pc392/",
+    "icon": "widgets/bonificacao-pc392/icon.svg",
+    "order": 700,
+    "group": 7
+  },
+  {
+    "name": "devolver-os-pc392",
+    "manifest": {
+      "name": "devolver-os-pc392",
+      "label": "Devolver OS PC 392",
+      "type": "widget",
+      "version": "1.0.0",
+      "exbVersion": "1.21.0",
+      "author": "Effico Saneamento",
+      "description": "Botão para devolver o vazamento selecionado para nova OS, com motivo obrigatório (grava status_os = devolvida e motivo_devolucao).",
+      "copyright": "",
+      "license": "http://www.apache.org/licenses/LICENSE-2.0",
+      "dependency": [
+        "jimu-arcgis"
+      ],
+      "defaultSize": {
+        "width": 600,
+        "height": 120
+      },
+      "translatedLocales": [
+        "en"
+      ],
+      "properties": {
+        "hasSettingPage": false
+      }
+    },
+    "i18nLabel": {},
+    "i18nDescription": {},
+    "uri": "widgets/devolver-os-pc392/",
+    "icon": "widgets/devolver-os-pc392/icon.svg",
+    "order": 700,
+    "group": 7
+  },
+  {
     "name": "effico-executive",
     "manifest": {
       "name": "effico-executive",
@@ -12839,6 +12905,72 @@
     "i18nDescription": {},
     "uri": "widgets/effico-executive/",
     "icon": "widgets/effico-executive/icon.svg",
+    "order": 700,
+    "group": 7
+  },
+  {
+    "name": "gerencial-pc392",
+    "manifest": {
+      "name": "gerencial-pc392",
+      "label": "Visão gerencial PC 392",
+      "type": "widget",
+      "version": "1.0.0",
+      "exbVersion": "1.21.0",
+      "author": "Effico Saneamento",
+      "description": "Painel gerencial do PC 392: indicadores de desempenho, funil do vazamento, evolução mensal e rankings. Respeita os filtros do app.",
+      "copyright": "",
+      "license": "http://www.apache.org/licenses/LICENSE-2.0",
+      "dependency": [
+        "jimu-arcgis"
+      ],
+      "defaultSize": {
+        "width": 1200,
+        "height": 800
+      },
+      "translatedLocales": [
+        "en"
+      ],
+      "properties": {
+        "hasSettingPage": false
+      }
+    },
+    "i18nLabel": {},
+    "i18nDescription": {},
+    "uri": "widgets/gerencial-pc392/",
+    "icon": "widgets/gerencial-pc392/icon.svg",
+    "order": 700,
+    "group": 7
+  },
+  {
+    "name": "indicadores-pc392",
+    "manifest": {
+      "name": "indicadores-pc392",
+      "label": "Indicadores PC 392",
+      "type": "widget",
+      "version": "1.0.0",
+      "exbVersion": "1.21.0",
+      "author": "Effico Saneamento",
+      "description": "Indicadores do PC 392: comparativo mensal (apontados × validados / OS abertas / reparados) e ruas com mais vazamentos com a lista de vazamentos. Respeita os filtros do app.",
+      "copyright": "",
+      "license": "http://www.apache.org/licenses/LICENSE-2.0",
+      "dependency": [
+        "jimu-arcgis"
+      ],
+      "defaultSize": {
+        "width": 1200,
+        "height": 800
+      },
+      "translatedLocales": [
+        "en"
+      ],
+      "properties": {
+        "hasSettingPage": false
+      }
+    },
+    "i18nLabel": {},
+    "i18nDescription": {},
+    "uri": "widgets/indicadores-pc392/",
+    "icon": "widgets/indicadores-pc392/icon.svg",
     "order": 700,
     "group": 7
   },
@@ -12899,6 +13031,39 @@
     "i18nDescription": {},
     "uri": "widgets/produtividade-pc403/",
     "icon": "widgets/produtividade-pc403/icon.svg",
+    "order": 700,
+    "group": 7
+  },
+  {
+    "name": "resumo-filtro-pc392",
+    "manifest": {
+      "name": "resumo-filtro-pc392",
+      "label": "Resumo do filtro PC 392",
+      "type": "widget",
+      "version": "1.0.0",
+      "exbVersion": "1.21.0",
+      "author": "Effico Saneamento",
+      "description": "Mostra, em texto, o filtro do cabeçalho que está valendo na camada OCORRÊNCIAS.",
+      "copyright": "",
+      "license": "http://www.apache.org/licenses/LICENSE-2.0",
+      "dependency": [
+        "jimu-arcgis"
+      ],
+      "defaultSize": {
+        "width": 400,
+        "height": 36
+      },
+      "translatedLocales": [
+        "en"
+      ],
+      "properties": {
+        "hasSettingPage": false
+      }
+    },
+    "i18nLabel": {},
+    "i18nDescription": {},
+    "uri": "widgets/resumo-filtro-pc392/",
+    "icon": "widgets/resumo-filtro-pc392/icon.svg",
     "order": 700,
     "group": 7
   },
