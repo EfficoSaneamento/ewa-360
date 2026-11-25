@@ -825,9 +825,9 @@
             "left": "79.6%",
             "right": "0.0%",
             "top": "0%",
-            "bottom": "45%",
+            "bottom": "38%",
             "width": "20.4%",
-            "height": "55%"
+            "height": "62%"
           },
           "setting": {
             "autoProps": {
@@ -847,10 +847,10 @@
           "bbox": {
             "left": "79.6%",
             "right": "0.0%",
-            "top": "55%",
+            "top": "62%",
             "bottom": "0%",
             "width": "20.4%",
-            "height": "45%"
+            "height": "38%"
           },
           "setting": {
             "autoProps": {
@@ -2962,14 +2962,19 @@
       "config": {
         "layersConfig": [],
         "editMode": "GEOMETRY",
-        "selfSnapping": false,
-        "featureSnapping": false,
-        "defaultSelfEnabled": false,
-        "defaultFeatureEnabled": false,
+        "selfSnapping": true,
+        "featureSnapping": true,
+        "defaultSelfEnabled": true,
+        "defaultFeatureEnabled": true,
         "defaultSnapLayers": [
-          "dataSource_9-a62c10caed784df59a88be77326fa25a-a83de78b71fc4a4b9e4cfeea627febb7",
+          "dataSource_9-a62c10caed784df59a88be77326fa25a-82b806589dec4e0088c3610ae4cfaf69",
+          "dataSource_9-a62c10caed784df59a88be77326fa25a-5400c430e4e84c40aa82748e9c1eab6f",
+          "dataSource_9-a62c10caed784df59a88be77326fa25a-eb5cd73eb7f94f57af1d470dd633cfc3",
+          "dataSource_9-a62c10caed784df59a88be77326fa25a-9306668f659b41f897940fa9325bb66d",
+          "dataSource_9-a62c10caed784df59a88be77326fa25a-31ca2b0a3600405da645994f9fd0431d",
           "dataSource_9-a62c10caed784df59a88be77326fa25a-c2ddc96589f244069824b00fdb5a3937",
-          "dataSource_9-9e7b052242c84d648f310e38d7c23335"
+          "dataSource_9-a62c10caed784df59a88be77326fa25a-a83de78b71fc4a4b9e4cfeea627febb7",
+          "dataSource_9-32240dd98e374bcaa6939ef6d02e48ed-990eb11e3e194c4a807b14fb63fc0228"
         ],
         "tooltip": true,
         "templateFilter": true,
