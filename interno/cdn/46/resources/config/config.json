@@ -2279,6 +2279,7 @@
       "label": "Nome do Projeto",
       "config": {
         "text": "<p style=\"text-align: left; margin: 0;\"><span style=\"color: #ffffff; font-size: 13px; font-weight: 700; letter-spacing: 0.05em;\">MODELAGEM SABESP</span></p><p style=\"text-align: left; margin: 0;\"><span style=\"color: #a9cc8c; font-size: 10.5px; font-weight: 600;\">PC 403 · Consórcio Effico · HWater</span></p>",
+        "placeholder": "<p><span style=\"font-size: 24px;\">Título</span></p>",
         "style": {
           "verticalAlign": "center",
           "wrap": true,
@@ -2979,7 +2980,7 @@
         "tooltip": true,
         "templateFilter": true,
         "liveDataEditing": false,
-        "initialReshapeMode": false,
+        "initialReshapeMode": true,
         "relatedRecords": true,
         "description": "",
         "noDataMessage": "",
@@ -3490,14 +3491,7 @@
     }
   },
   "attributes": {
-    "portalUrl": "https://efficoutilities.maps.arcgis.com",
-    "isWebTier": false,
-    "clientId": "lNYt5AOFsvNkreve",
-    "express": false,
-    "title": "PC 403 - MODELAGEM SABESP_Template 1",
-    "description": "",
-    "type": "Web Experience",
-    "thumbnail": null
+    "portalUrl": "https://efficoutilities.maps.arcgis.com"
   },
   "timestamp": "1793878779403",
   "sharedThemeVariables": {
@@ -4002,6 +3996,5 @@
         }
       }
     }
-  },
-  "publishTimestamp": 1794250187054
+  }
 }
