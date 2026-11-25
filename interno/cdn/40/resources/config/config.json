@@ -228,6 +228,19 @@
           "color": "var(--ref-palette-neutral-1100)"
         }
       }
+    },
+    "page_1": {
+      "id": "page_1",
+      "mode": "FIT_WINDOW",
+      "type": "NORMAL",
+      "layout": {
+        "LARGE": "layout_1"
+      },
+      "isDefault": false,
+      "isVisible": false,
+      "label": "Diretoria",
+      "header": true,
+      "footer": false
     }
   },
   "layouts": {
@@ -2126,6 +2139,38 @@
       "order": [
         "0"
       ]
+    },
+    "layout_1": {
+      "type": "FIXED",
+      "content": {
+        "0": {
+          "type": "WIDGET",
+          "widgetId": "widget_ewa_diretoria",
+          "bbox": {
+            "left": "0%",
+            "right": "0%",
+            "top": "0%",
+            "bottom": "0%",
+            "width": "100%",
+            "height": "100%"
+          },
+          "setting": {
+            "autoProps": {
+              "left": false,
+              "right": false,
+              "top": false,
+              "bottom": false,
+              "width": "STRETCH",
+              "height": "STRETCH"
+            },
+            "vCenter": false,
+            "hCenter": false
+          }
+        }
+      },
+      "order": [
+        "0"
+      ]
     }
   },
   "exbVersion": "1.21.0",
@@ -2234,6 +2279,7 @@
       "label": "Nome do Projeto",
       "config": {
         "text": "<p style=\"text-align: left; margin: 0;\"><span style=\"color: #ffffff; font-size: 13px; font-weight: 700; letter-spacing: 0.05em;\">MODELAGEM SABESP</span></p><p style=\"text-align: left; margin: 0;\"><span style=\"color: #a9cc8c; font-size: 10.5px; font-weight: 600;\">PC 403 · Consórcio Effico · HWater</span></p>",
+        "placeholder": "<p><span style=\"font-size: 24px;\">Título</span></p>",
         "style": {
           "verticalAlign": "center",
           "wrap": true,
@@ -3334,6 +3380,15 @@
       "useMapWidgetIds": [
         "widget_281"
       ]
+    },
+    "widget_ewa_diretoria": {
+      "id": "widget_ewa_diretoria",
+      "uri": "widgets/effico-executive/",
+      "version": "2.0.0",
+      "label": "Diretoria e setores",
+      "config": {
+        "mode": "diretoria"
+      }
     }
   },
   "widgetsManifest": {},
@@ -3431,14 +3486,7 @@
     }
   },
   "attributes": {
-    "portalUrl": "https://efficoutilities.maps.arcgis.com",
-    "isWebTier": false,
-    "clientId": "lNYt5AOFsvNkreve",
-    "express": false,
-    "title": "PC 403 - MODELAGEM SABESP_Template 1",
-    "description": "",
-    "type": "Web Experience",
-    "thumbnail": null
+    "portalUrl": "https://efficoutilities.maps.arcgis.com"
   },
   "timestamp": "1793878779403",
   "sharedThemeVariables": {
@@ -3860,6 +3908,9 @@
     },
     {
       "page_20": []
+    },
+    {
+      "page_1": []
     }
   ],
   "customTheme": {},
@@ -3940,6 +3991,5 @@
         }
       }
     }
-  },
-  "publishTimestamp": 1794250187054
+  }
 }
