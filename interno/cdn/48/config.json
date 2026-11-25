@@ -802,12 +802,12 @@
           "type": "WIDGET",
           "widgetId": "widget_281",
           "bbox": {
-            "left": "0.0%",
-            "right": "20.4%",
-            "top": "0.0%",
-            "bottom": "0.0%",
-            "width": "79.6%",
-            "height": "100.0%"
+            "left": "0%",
+            "right": "33%",
+            "top": "0%",
+            "bottom": "0%",
+            "width": "67%",
+            "height": "100%"
           },
           "setting": {
             "autoProps": {
@@ -818,39 +818,16 @@
             }
           }
         },
-        "1": {
-          "type": "WIDGET",
-          "widgetId": "widget_297",
-          "bbox": {
-            "left": "79.6%",
-            "right": "0.0%",
-            "top": "0%",
-            "bottom": "38%",
-            "width": "20.4%",
-            "height": "62%"
-          },
-          "setting": {
-            "autoProps": {
-              "right": false,
-              "left": true,
-              "top": false,
-              "bottom": false,
-              "height": false
-            },
-            "vCenter": false,
-            "hCenter": false
-          }
-        },
         "2": {
           "type": "WIDGET",
           "widgetId": "widget_ewa_editar_vinculo",
           "bbox": {
-            "left": "79.6%",
-            "right": "0.0%",
-            "top": "62%",
+            "left": "67%",
+            "right": "0%",
+            "top": "0%",
             "bottom": "0%",
-            "width": "20.4%",
-            "height": "38%"
+            "width": "33%",
+            "height": "100%"
           },
           "setting": {
             "autoProps": {
@@ -867,7 +844,6 @@
       "type": "FIXED",
       "order": [
         "0",
-        "1",
         "2"
       ],
       "label": "Primeiro"
@@ -2573,18 +2549,18 @@
         "direction": "VERTICAL",
         "collapseSide": "SECOND",
         "overlay": false,
-        "size": "300px",
+        "size": "0px",
         "divider": {
-          "visible": true,
+          "visible": false,
           "lineStyle": {
             "type": "solid",
             "color": "var(--light-500)",
             "width": "1px"
           }
         },
-        "resizable": true,
+        "resizable": false,
         "toggleBtn": {
-          "visible": true,
+          "visible": false,
           "iconSource": 0,
           "icon": "DOWN",
           "offsetX": 0,
