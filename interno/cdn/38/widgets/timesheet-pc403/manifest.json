@@ -1,0 +1,21 @@
+{
+  "name": "timesheet-pc403",
+  "label": "Timesheet PC 403",
+  "type": "widget",
+  "version": "1.21.0",
+  "exbVersion": "1.21.0",
+  "author": "Effico Saneamento",
+  "description": "Timesheet semanal da modelagem PC 403: grade por responsável, indicadores, lançamento e anulação de horas direto na tabela apontamentos_modelagem.",
+  "copyright": "",
+  "license": "http://www.apache.org/licenses/LICENSE-2.0",
+  "properties": {
+    "hasSettingPage": false
+  },
+  "translatedLocales": [
+    "en"
+  ],
+  "defaultSize": {
+    "width": 1100,
+    "height": 700
+  }
+}

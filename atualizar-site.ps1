@@ -26,6 +26,14 @@ try {
 
 foreach ($n in ($apps | ForEach-Object { $_[1] })) {
   $dest = Join-Path $site $n
+  # guarda a versão anterior (cdn/<N>): quem está com a página aberta (index.html em cache por ~10 min no
+  # GitHub Pages) continua carregando a versão antiga em vez de dar 404 em cdn/<N>/config.json (25/11/2026)
+  $anterior = $null; $nomeAnt = $null
+  $cdnAtual = Join-Path $dest 'cdn'
+  if (Test-Path $cdnAtual) {
+    $ult = Get-ChildItem $cdnAtual -Directory | Where-Object { $_.Name -match '^\d+$' } | Sort-Object { [int]$_.Name } | Select-Object -Last 1
+    if ($ult) { $nomeAnt = $ult.Name; $anterior = Join-Path $tmp "cdn-anterior-$n"; Copy-Item $ult.FullName $anterior -Recurse }
+  }
   if (Test-Path $dest) { Remove-Item $dest -Recurse -Force }
   Expand-Archive -LiteralPath (Join-Path $tmp "$n.zip") -DestinationPath $dest
   # o pacote às vezes vem com uma pasta raiz: sobe o conteúdo
@@ -33,6 +41,10 @@ foreach ($n in ($apps | ForEach-Object { $_[1] })) {
   if ($itens.Count -eq 1 -and $itens[0].PSIsContainer -and -not (Test-Path (Join-Path $dest 'index.html'))) {
     Get-ChildItem $itens[0].FullName -Force | Move-Item -Destination $dest
     Remove-Item $itens[0].FullName -Recurse -Force
+  }
+  if ($anterior -and -not (Test-Path (Join-Path $dest "cdn\$nomeAnt"))) {
+    Copy-Item $anterior (Join-Path $dest "cdn\$nomeAnt") -Recurse
+    Write-Host "$n mantém a versão anterior (cdn/$nomeAnt) para quem está com a página aberta"
   }
   # arquivos do servidor IIS e service worker não servem no GitHub Pages
   Remove-Item (Join-Path $dest 'web.config') -ErrorAction SilentlyContinue

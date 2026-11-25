@@ -1,0 +1,21 @@
+{
+  "name": "produtividade-pc403",
+  "label": "Produtividade PC 403",
+  "type": "widget",
+  "version": "1.21.0",
+  "exbVersion": "1.21.0",
+  "author": "Effico Saneamento",
+  "description": "Produtividade da equipe de modelagem PC 403: horas do Timesheet × entregas no ProjectWise, somente com totais (sem identificação individual).",
+  "copyright": "",
+  "license": "http://www.apache.org/licenses/LICENSE-2.0",
+  "properties": {
+    "hasSettingPage": false
+  },
+  "translatedLocales": [
+    "en"
+  ],
+  "defaultSize": {
+    "width": 1200,
+    "height": 800
+  }
+}
